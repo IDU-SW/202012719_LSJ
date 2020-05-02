@@ -1,0 +1,26 @@
+[
+    {
+      "id":0,
+      "title":"정의란 무엇인가",
+      "director":"마이클 샌델",
+      "year":2008,
+      "type":"정치철학",
+      "book_img":"justice.jpg"
+    },
+    {
+      "id":1,
+      "title":"원피스",
+      "director":"오다 에이치로",
+      "year":1997,
+      "type":"만화",
+      "book_img":"onepiece.jpg"
+    },
+    {
+      "id":2,
+      "title":"알렉스 퍼거슨 : 열정의 화신",
+      "director":"알렉스 퍼거슨",
+      "year":2007,
+      "type":"자서전",
+      "book_img":"alex.jpg"
+    }
+  ]

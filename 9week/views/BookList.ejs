@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>책 리스트</title>
+    <h1 style="color:royalblue;">책 리스트</h1>
+</head>
+<body>
+    <ul>
+        <% data.forEach(function(item) { %>
+            <h3><a href='../Book/<%= item.id %>'>번호 : <%= item.id %></a></h3>
+            <ul>
+                <li>책 제목 : <%= item.title %>  </li>
+                <li>책 저자 : <%= item.director %>  </li>
+                <li>책 발행일 : <%= item.year %>  </li>
+                <li>책 타입 : <%= item.type %>  </li>
+            </ul>
+        <% }) %>
+    </ul>
+    <br>
+    <a href="../BookAdd">추가</a>
+</body>
+</html>
