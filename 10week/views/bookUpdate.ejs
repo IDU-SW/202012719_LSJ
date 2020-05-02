@@ -1,0 +1,21 @@
+<html>
+<head>
+   <meta charset="UTF-8" />
+    <title>Food</title>
+</head>
+<body>
+    <h1><%= detail.book %> 수정하기</h1> 
+    <form action="/books/edit" method="POST" >
+        <input type="hidden" name="id" value="<%= detail._id %>">
+<pre>
+제목  : <input type="text" name="book"" value="<%= detail.book %>" style="width:200px;"></br>
+종류  : <input type="text" name="kind" value="<%= detail.kind %>"style="width:200px;"></br>
+특징  : <input type="text" name="explanation" value="<%= detail.explanation %>" style="width:600px;">
+
+<p>
+<input type="submit" value="수정">  <input type="button" value="돌아가기" onclick="history.back(-1)">
+</p>
+</pre>
+    </form> 
+</body>
+</html>

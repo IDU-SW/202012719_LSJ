@@ -1,0 +1,22 @@
+<html>
+<head>
+   <meta charset="UTF-8" />
+    <title>book_list</title>
+</head>
+<body>
+    <h1>목록</h1>
+
+    <% books.forEach(function(item) { %>
+    <h3><a href='/books/<%= item._id %>'>번호 : <%= item._id %></a></h3>
+    
+        제목 : <%= item.book %>  <br>
+        분류 : <%= item.kind %>  <br>
+        분류 : <%= item.explanation %>  <br>
+    
+    <% }) %>
+
+    <p>
+    <input type="button" value="추가" style="width:80" onclick="location.href='/book/add'">
+    </p>
+</body>
+</html>

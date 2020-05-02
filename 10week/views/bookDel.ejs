@@ -1,0 +1,23 @@
+<html>
+<head>
+   <meta charset="UTF-8" />
+    <title>FOOD</title>
+</head>
+<body>
+    <h1>상세설명</h1>
+    
+    제목 : <%= detail.book %>    </br>
+    
+    분류 : <%= detail.kind %>    </br>
+    특징 : <%= detail.explanation %>   </br>
+    
+    </br>
+
+    <form name="detail" method="post" action="/books/delete">
+        <input type="hidden" name="id" value="<%= detail._id %>">
+        <input type="button" value="수정" onclick="location.href='/book/detail/<%= detail._id %>'">&nbsp;
+        <input type="submit" value="삭제">
+        <input type="button" value="돌아가기" onclick="history.back(-1)">
+    </form>  
+</body>
+</html>
