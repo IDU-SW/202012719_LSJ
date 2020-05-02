@@ -5,13 +5,19 @@ const books = require('../model/books');
 router.get('/books', showbookList);
 router.get('/books/:bookId', showbookDetail);
 router.post('/books', addbook);
+router.get('/add', addbookForm);
 
 module.exports = router;
 
+function addbookForm(req, res) {
+    res.render('booksAdd');
+}
+
 function showbookList(req, res) {
     const bookList = books.getbookList();
-    const result = { data:bookList, count:bookList.length };
-    res.send(result);
+    //const result = { data:bookList, count:bookList.length };
+    //res.send(result);
+    res.render('books', {books:bookList, count:bookList.length});
 }
 
 
@@ -22,6 +28,7 @@ async function showbookDetail(req, res) {
         const bookId = req.params.bookId;
         console.log('bookId : ', bookId);
         const info = await books.getbookDetail(bookId);
+        res.render('booksDetail', {detail : info});
         res.send(info);
     }
     catch ( error ) {
@@ -47,7 +54,8 @@ async function addbook(req, res) {
 
     try {
         const result = await books.addbook(title, director, year, type);
-        res.send({msg:'success', data:result});
+        //res.send({msg:'success', data:result});
+        res.render('addComplete',{data:result});
     }
     catch ( error ) {
         res.status(500).send(error.msg);
