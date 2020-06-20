@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>202012701 박인규 기말 프로젝트</title>
+</head>
+
+<body>
+    <h1><%= data.OstTitle %> 상세정보</h1>
+        - Id : <%= data._id %> <br/>
+        - 커피 이름 : <%= data.name %> <br/>
+        - 커피 용량 : <%= data.volume %> <br/>
+        - 커피 칼로리 : <%= data.calorie %> <br/>
+        - 커피 카페인 : <%= data.caffeine %> <br/>
+
+        <form name="detail" method="post" action="/coffee/delete/<%= data._id %>">
+            <input type="hidden" name="Coffeeid" value="<%= data._id %>">
+            <input type="button" value="커피 수정" onclick="location.href='/coffee/update/<%= data._id %>'">&nbsp;
+            <input type="submit" value="커피 삭제">&nbsp;
+            <input type="button" value="back" onclick="location.href='/coffee'">&nbsp;
+        </form>
+</body>
+
+</html>

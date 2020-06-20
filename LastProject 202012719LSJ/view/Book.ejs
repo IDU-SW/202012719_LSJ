@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <h1>목록</h1>
+    <h3>어서오세요~ <%= user.registerName %> 님 오늘도 좋은 하루 되세요. </h3>
+    <p>
+        <input type="button" value="책등록" onclick="location.href='/book/add'"> <input type="button" value="로그아웃" onclick="location.href='/logout'">
+    </p>
+    <% book.forEach(function(data) { %>
+    <h3><a href='/book/<%= data._id %>'>ID : <%= data._id %></a></h3>
+
+    책 이름 : <%= data.name %> </br>
+    책 양 : <%= data.volume %> </br>
+    책 내용 : <%= data.calorie %> </br>
+    책 발행일 : <%= data.caffeine %> </br>
+    <% }) %>
+</body>
+
+</html>

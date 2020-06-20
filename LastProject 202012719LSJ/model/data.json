@@ -1,0 +1,42 @@
+[
+  {
+      "id":0,
+      "name":"에스프레소",
+      "volume":"22ml",
+      "calorie":"5Kcal",
+      "caffeine":"75mg",
+      "photo":"Espresso.jpg"
+  },
+  {
+      "id":1,
+      "name":"아메리카노",
+      "volume":"355ml",
+      "calorie":"10Kcal",
+      "caffeine":"150mg",
+      "photo":"Americano.jpg"
+  },
+  {
+      "id":2,
+      "name":"카페 라떼",
+      "volume":"355ml",
+      "calorie":"110Kcal",
+      "caffeine":"75mg",
+      "photo":"Caffe Latte.jpg"
+  },
+  {
+      "id":3,
+      "name":"콜드 브루",
+      "volume":"355ml",
+      "calorie":"5Kcal",
+      "caffeine":"150mg",
+      "photo":"Cold Brew.jpg"
+  },
+  {
+      "id":4,
+      "name":"카푸치노",
+      "volume":"355ml",
+      "calorie":"115Kcal",
+      "caffeine":"75mg",
+      "photo":"Cappuccino.jpg"
+  }
+]

@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>202012701 박인규 기말 프로젝트</title>
+</head>
+
+<body>
+    <h1><%= data.name %> 커피 수정</h1>
+    <form method="post" action="/song/update/<%= data._id %>">
+        <input type="hidden" name="songId" value="<%= data._id %>">
+        커피 이름 : <input type="text" name="name" value="<%= data.name %>" style="width: 300px;"> <br/>
+        커피 용량 : <input type="text" name="volume" value="<%= data.volume %>" style="width: 300px;"> <br/>
+        커피 칼로리 : <input type="number" name="calorie" value="<%= data.calorie %>" style="width: 300px;"><br/>
+        커피 카페인 : <input type="text" name="caffeine" value="<%= data.caffeine %>" style="width: 300px;"><br/><br/>
+        <input type="submit" value="update"> &nbsp;
+        <input type="button" value="back" onClick="history.go(-1)">
+    </form>
+</body>
+
+</html>
